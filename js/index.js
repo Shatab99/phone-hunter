@@ -102,6 +102,9 @@ phonebrand.innerText = 'brand : '+phone.brand;
 const phonerelease = document.getElementById('phone-release');
 phonerelease.innerText = 'Release Date : ' +phone.releaseDate;
 
+const phonechipset = document.getElementById('phone-chipset');
+phonechipset.innerText ='Chipset:  ' + phone.mainFeatures.chipSet ;
+
 
   my_details_modal.showModal()
 
