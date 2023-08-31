@@ -15,12 +15,44 @@
     </header>
     <main class="container mx-auto">
         <section class="flex my-12 justify-center">
-            <input type="text" placeholder="Search for phones " class="input input-bordered input-primary w-full max-w-xs mr-2"  id="search-feild"/>
+            <input type="text" placeholder="Search for phones "
+                class="input input-bordered input-primary w-full max-w-xs mr-2" id="search-feild" />
             <button class="btn btn-primary" onclick="search()">Search</button>
+
         </section>
         <section>
-            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-8 py-6 lg:px-0 lg:py-0"></div>
-            
+            <div class="text-center my-40 hidden" id="loading">
+                <span class="loading loading-dots text-primary loading-lg"></span>
+            </div>
+
+            <div id="phone-container"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-8 py-6 lg:px-0 lg:py-0"></div>
+
+
+            <div id="show-all" class="hidden container  text-center">
+                <button class="btn btn-wide bg-indigo-600 text-white my-12 " onclick="showall()">Show All</button>
+            </div>
+
+            <!-- show modal -->
+            <!-- Open the modal using ID.showModal() method -->
+           
+            <dialog id="my_details_modal" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box">
+                    <div id="phone-image">
+                        
+                    </div>
+                    <h3 id="phone-name" class="font-bold text-lg"></h3>
+                    <p class="py-2" id="phone-storage"></p>
+                    <p class="py-2" id="phone-displaysize"></p>
+                    <p class="py-2" id="phone-brand"></p>
+                    <p class="py-2" id="phone-release"></p>
+                    <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </div>
+                </form>
+            </dialog>
+
         </section>
     </main>
     <footer>
